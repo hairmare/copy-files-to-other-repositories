@@ -36,6 +36,11 @@ inputs:
       Comma-separated list of file paths or directories that should be handled by this action and updated in other repositories.
       In the format `.github/workflows`.
     required: true  
+  dispatch_root:
+    description: >
+      Specify an alternative root dir to look for files to include when triggered via workflow_dispatch. Uses the current working
+      directory if not specified.
+    required: false
   repos_to_ignore:
     description: >
       Comma-separated list of repositories that should not get updates from this action.
